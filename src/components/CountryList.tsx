@@ -45,7 +45,7 @@ export default function CountryList() {
           <section className="countries">
               {
                   countryList.map(country => {
-                    return <Country info={country}/>
+                    return <Country key ={countryList.indexOf(country)} info={country}/>
                   })
               }
           </section>

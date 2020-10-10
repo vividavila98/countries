@@ -5,12 +5,20 @@ interface Props {
 }
 
 export default function Country(props: Props) {
-    const {info} = props; 
+    const {info} = props;
+    const flagStyle = {
+      backgroundImage: `url(${info.flag})`,
+      backgroundColor: '#000',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
+    };
+
   return (
     <div className="country">
       <div className="card">
-          <div className="img-header">
-              <img src={info.flag} />
+          <div className="img-header" style={flagStyle}>
+              {/*<img src={info.flag} alt="flag" />*/}
           </div>
           <div className="info">
               <p className="name">{info.name}</p>
