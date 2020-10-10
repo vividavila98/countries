@@ -1,9 +1,24 @@
 import React from 'react';
 
-export default function Country() {
+interface Props {
+    info: any;
+}
+
+export default function Country(props: Props) {
+    const {info} = props; 
   return (
     <div className="country">
-      <p>one country</p>
+      <div className="card">
+          <div className="img-header">
+              <img src={info.flag} />
+          </div>
+          <div className="info">
+              <p className="name">{info.name}</p>
+              <p className="population"><span className="name">Population:</span> {info.population}</p>
+              <p className="region"><span className="name">Region:</span> {info.region}</p>
+              <p className="capital"><span className="name">Capital:</span> {info.capital}</p>
+          </div>
+      </div>
     </div>
   );
 }

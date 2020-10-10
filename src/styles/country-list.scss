@@ -13,8 +13,6 @@ div.country-list {
         }
     }
     section.list {
-        height: 95vh;
-
         section.fields {
             padding: 50px 5%;
             display: flex;
@@ -33,6 +31,10 @@ div.country-list {
                 height: 55px;
                 width: 150px;
             }
+        }
+        section.countries {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 }
