@@ -1,0 +1,38 @@
+div.country-list {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 5%;
+
+        div.title {
+            font-weight: 900;
+        }
+        
+        img.moon {
+            height: 25px;
+        }
+    }
+    section.list {
+        height: 95vh;
+
+        section.fields {
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                border: none;
+                height: 35px;
+                width: 300px;
+                padding: 10px;
+            }
+
+            button {
+                border: none;
+                background-color: #fff;
+                height: 55px;
+                width: 150px;
+            }
+        }
+    }
+}
