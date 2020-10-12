@@ -7,17 +7,31 @@ import axios from 'axios';
 export default function CountryList() {
     const [searchCountry, setSearchCountry] = useState('');
     const [countryList, setCountryList] = useState([]);
+    const [searchCountryNames, setSearchName] = useState([]);
 
-    const handleSearch = (e: FormEvent<HTMLInputElement>) => {
-        setSearchCountry(e.currentTarget.value);
+    // search for country based on input in search field 
+    const searchName = async (name: string) => {
+        try {
+            const search = await axios.get(`https://restcountries.eu/rest/v2/name/${name}`);
+            console.log(search.data);
+            setSearchName(search.data);
+        } catch(e) {
+            console.error(e);
+        }
     };
 
+    // while inputting in search field 
+    const handleSearch = (e: FormEvent<HTMLInputElement>) => {
+        setSearchCountry(e.currentTarget.value);
+        searchName(e.currentTarget.value);
+    };
+ 
+    // get all info on countries
     useEffect(() => {
         const callCountry = async () => {
             try {
                 const call = await axios.get('https://restcountries.eu/rest/v2/all');
                 if (call.data) {
-                    console.log(call.data);
                     setCountryList(call.data);
                 }
             } catch(e) {
@@ -43,10 +57,16 @@ export default function CountryList() {
               </div>
           </section>
           <section className="countries">
-              {
+              { searchCountryNames.length === 0 && 
                   countryList.map(country => {
                     return <Country key ={countryList.indexOf(country)} info={country}/>
                   })
+              }
+              {
+               searchCountryNames.length > 0 &&   
+               searchCountryNames.map(country => {
+                return <Country key ={searchCountryNames.indexOf(country)} info={country}/>
+              })
               }
           </section>
       </section>
