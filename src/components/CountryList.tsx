@@ -8,6 +8,8 @@ export default function CountryList() {
     const [searchCountry, setSearchCountry] = useState('');
     const [countryList, setCountryList] = useState([]);
     const [searchCountryNames, setSearchName] = useState([]);
+    const [viewRegion, setViewRegion] = useState(false);
+    const [regionList, setRegionList] = useState([]);
 
     // search for country based on input in search field 
     const searchName = async (name: string) => {
@@ -41,6 +43,19 @@ export default function CountryList() {
         callCountry();
     }, []);
 
+    // search by region
+    const searchRegion = async (region: string) => {
+        try {
+            const search = await axios.get(`https://restcountries.eu/rest/v2/region/${region}`);
+            setRegionList(search.data);
+            setViewRegion(false);
+        } catch(e) {
+            console.error(e);
+        }
+    }
+
+    console.log(regionList);
+
   return (
     <div className="country-list">
       <header>
@@ -53,10 +68,24 @@ export default function CountryList() {
                   <input type="text"  value={searchCountry} onChange={handleSearch} placeholder="Search for a country..." />
               </div>
               <div>
-                  <button>Filter by Region</button>
+                  <button className="list" onClick={() => setViewRegion(!viewRegion)}>Filter by Region</button>
+                  {viewRegion && 
+                  <div className="region-container">
+                      <div className="region" onClick={() => searchRegion("Africa")}>Africa</div>
+                      <div className="region" onClick={() => searchRegion("Americas")}>America</div>
+                      <div className="region" onClick={() => searchRegion("Asia")}>Asia</div>
+                      <div className="region" onClick={() => searchRegion("Europe")}>Europe</div>
+                      <div className="region" onClick={() => searchRegion("Oceania")}>Oceania</div>
+                  </div>
+                  }
               </div>
           </section>
           <section className="countries">
+          { regionList.length > 0 && 
+                  regionList.map(region => {
+                    return <Country key ={regionList.indexOf(region)} info={region}/>
+                  })
+              }
               { searchCountryNames.length === 0 && 
                   countryList.map(country => {
                     return <Country key ={countryList.indexOf(country)} info={country}/>

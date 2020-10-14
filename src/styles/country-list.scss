@@ -15,22 +15,41 @@ div.country-list {
     section.list {
         section.fields {
             padding: 50px 5%;
+            padding-bottom: 0;
+            height: 100px;
+            position: sticky;
             display: flex;
             justify-content: space-between;
 
             input {
                 border: none;
+                border-radius: 5px;
                 height: 35px;
                 width: 300px;
                 padding: 10px;
             }
 
-            button {
+            .region-container {
+                background-color: #fff;
+                .region {
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #F2F2F2;
+                    }
+                }
+            }
+
+            button.list {
                 border: none;
+                border-radius: 5px;
                 background-color: #fff;
                 height: 55px;
                 width: 150px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
+            
         }
         section.countries {
             display: flex;
