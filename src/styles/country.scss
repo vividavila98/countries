@@ -1,6 +1,8 @@
 div.country {
-    margin: 25px;
-    flex: 1 1 29%;
+    display: inline-block;
+    margin: 10px;
+    width: 30%;
+
     div.card {
         background-color: #fff;
         border-radius: 5px;
@@ -13,6 +15,10 @@ div.country {
             padding-top: 10px;
             .name {
                 font-weight: bold;
+            }
+            p.country {
+                font-size: 1.2em;
+                height: 40px;
             }
         }
     }

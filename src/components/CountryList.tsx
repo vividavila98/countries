@@ -10,6 +10,7 @@ export default function CountryList() {
     const [searchCountryNames, setSearchName] = useState([]);
     const [viewRegion, setViewRegion] = useState(false);
     const [regionList, setRegionList] = useState([]);
+    //const [darkMode, setDarkMode] = useState();
 
     // search for country based on input in search field 
     const searchName = async (name: string) => {
@@ -58,8 +59,8 @@ export default function CountryList() {
 
   return (
     <div className="country-list">
-      <header>
-          <div className="title">Where in the world?</div>
+      <header className="light-header">
+          <div className="title"><a href="/">Where in the world?</a></div>
           <div>Dark Mode</div>
       </header>
       <section className="list light">

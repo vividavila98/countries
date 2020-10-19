@@ -4,8 +4,10 @@ div.country-list {
         justify-content: space-between;
         padding: 20px 5%;
 
-        div.title {
+        div.title a {
             font-weight: 900;
+            color: #000;
+            text-decoration: none;
         }
         
         img.moon {
@@ -50,10 +52,6 @@ div.country-list {
                 }
             }
             
-        }
-        section.countries {
-            display: flex;
-            flex-wrap: wrap;
         }
     }
 }
