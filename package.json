@@ -11,15 +11,21 @@
     "@types/node-sass": "^4.11.1",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
+    "ansi-html": "0.0.7",
+    "ansi-regex": "^6.0.1",
     "axios": "^0.20.0",
+    "color-string": "^1.6.0",
+    "glob-parent": "^6.0.2",
     "lodash": "^4.17.21",
     "merge-deep": "^3.0.3",
     "node-sass": "^4.14.1",
+    "postcss": "^8.3.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5",
-    "url-parse": "^1.5.3"
+    "url-parse": "^1.5.3",
+    "ws": "^8.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
