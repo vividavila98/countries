@@ -33,9 +33,10 @@ export default function CountryList() {
     useEffect(() => {
         const callCountry = async () => {
             try {
-                const call = await axios.get('https://restcountries.eu/rest/v2/all');
+                const call = await axios.get('https://restcountries.com/v3.1/all');
                 if (call.data) {
-                    setCountryList(call.data);
+                    // setCountryList(call.data);
+                    console.log(call.data);
                 }
             } catch(e) {
                 console.error(e);
