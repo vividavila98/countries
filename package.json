@@ -13,7 +13,7 @@
     "@types/react-dom": "^16.9.14",
     "ansi-html": "0.0.7",
     "ansi-regex": "^6.0.1",
-    "axios": "^0.20.0",
+    "axios": "^0.21.2",
     "color-string": "^1.6.0",
     "glob-parent": "^6.0.2",
     "lodash": "^4.17.21",
