@@ -1,5 +1,7 @@
-@import './country-list.scss';
-@import './country.scss';
+@import "./Components/Header/header.scss";
+@import "./Components/Searchbar/searchbar.scss";
+@import "./Components/CountryList/country-list.scss";
+@import "./Components/Country/country.scss";
 
 body {
     margin: 0;

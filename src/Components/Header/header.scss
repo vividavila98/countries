@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  
+  div.title a {
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+  } 
+  img.moon {
+    height: 25px;
+  }
+}
