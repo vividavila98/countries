@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CountryProfile() {
+export default function CountryView() {
     return (
         <div>
             

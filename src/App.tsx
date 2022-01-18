@@ -1,11 +1,11 @@
 import React from 'react';
-import Main from "./Pages/Main";
+import Homeview from "./Pages/HomeView";
 import './index.scss';
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Homeview />
     </div>
   );
 }

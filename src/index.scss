@@ -9,17 +9,36 @@ body {
 }
 
 .light {
-    background-color: #F2F2F2;
+  background-color: #FAFAFA;
 }
 
 .light-header {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .dark {
-    background-color: #202C36;
+  background-color: #202C36;
 }
 
 .dark-header {
-    background-color: #2B3844;
+  background-color: #2B3844;
+}
+
+.container {
+  max-width: 915px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 992px) {
+  .container {
+     max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 25px;
+  }
 }

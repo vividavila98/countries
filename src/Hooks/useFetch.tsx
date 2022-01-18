@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios, { AxiosError } from "axios";
+import { useEffect, useState } from 'react';
+import axios from "axios";
 
 export default function useFetch(url: string) {
   const [data, setData] = useState<any[]>([]);
@@ -20,7 +20,7 @@ export default function useFetch(url: string) {
 
   useEffect(() => {
     getData();
-  }, [url]);
+  }, []);
 
   return { data, loading, error };
 
