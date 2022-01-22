@@ -1,15 +1,16 @@
-@import "./Components/Header/header.scss";
-@import "./Components/Searchbar/searchbar.scss";
-@import "./Components/CountryList/country-list.scss";
-@import "./Components/Country/country.scss";
+@import "./components/Header/header.scss";
+@import "./components/SearchInput/searchinput.scss";
+@import "./components/CountryList/country-list.scss";
+@import "./components/Country/country.scss";
+@import "./components/FilterButton/filterbutton.scss";
 
 body {
-    margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .light {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .light-header {
@@ -17,11 +18,11 @@ body {
 }
 
 .dark {
-  background-color: #202C36;
+  background-color: #202c36;
 }
 
 .dark-header {
-  background-color: #2B3844;
+  background-color: #2b3844;
 }
 
 .container {
@@ -33,7 +34,7 @@ body {
 
 @media (max-width: 992px) {
   .container {
-     max-width: 720px;
+    max-width: 720px;
   }
 }
 
