@@ -15,19 +15,49 @@ export default function FilterButton(props: RegionResults) {
       </button>
       {toggle && (
         <div className="region-container">
-          <div className="region" onClick={() => setRegion("Africa")}>
+          <div
+            className="region"
+            onClick={() => {
+              setRegion("Africa");
+              setToggle(!toggle);
+            }}
+          >
             Africa
           </div>
-          <div className="region" onClick={() => setRegion("Americas")}>
+          <div
+            className="region"
+            onClick={() => {
+              setRegion("Americas");
+              setToggle(!toggle);
+            }}
+          >
             America
           </div>
-          <div className="region" onClick={() => setRegion("Asia")}>
+          <div
+            className="region"
+            onClick={() => {
+              setRegion("Asia");
+              setToggle(!toggle);
+            }}
+          >
             Asia
           </div>
-          <div className="region" onClick={() => setRegion("Europe")}>
+          <div
+            className="region"
+            onClick={() => {
+              setRegion("Europe");
+              setToggle(!toggle);
+            }}
+          >
             Europe
           </div>
-          <div className="region" onClick={() => setRegion("Oceania")}>
+          <div
+            className="region"
+            onClick={() => {
+              setRegion("Oceania");
+              setToggle(!toggle);
+            }}
+          >
             Oceania
           </div>
         </div>

@@ -10,13 +10,14 @@ export default function Homeview() {
   const [region, setRegion] = useState("");
 
   const regionRes = useFetch(`https://restcountries.com/v3.1/region/${region}`); // fetch countries by region
-  console.log(regionRes);
 
   const countriesRes = useFetch("https://restcountries.com/v3.1/all"); // fetch all countries
   // const searchRes = useFetch(
   //   `https://restcountries.com/v3.1/name/${searchCountries}`
   // ); // fetch countires by name
-  // const regionRes = useFetch(`https://restcountries.com/v3.1/region/${region}`); // fetch countries by region
+
+  console.log(regionRes.data.length);
+  console.log(countriesRes);
 
   const handleSearch = (e: FormEvent<HTMLInputElement>) => {
     setSearchCountries(e.currentTarget.value);
