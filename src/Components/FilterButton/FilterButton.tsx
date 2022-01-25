@@ -1,65 +1,40 @@
 import React, { useState } from "react";
 
 interface RegionResults {
-  setRegion: React.Dispatch<React.SetStateAction<string>>;
+  handleRegionChange: (value: string) => void;
 }
 
 export default function FilterButton(props: RegionResults) {
-  const { setRegion } = props;
+  const { handleRegionChange } = props;
   const [toggle, setToggle] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  const options = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+  const toggler = () => setToggle(!toggle);
+
+  const selectRegion = (value: string) => {
+    setSelected(value);
+    handleRegionChange(value);
+    toggler();
+  };
 
   return (
     <div>
-      <button className="list" onClick={() => setToggle(!toggle)}>
+      <button className="list" onClick={toggler}>
         Filter by Region
       </button>
       {toggle && (
         <div className="region-container">
-          <div
-            className="region"
-            onClick={() => {
-              setRegion("Africa");
-              setToggle(!toggle);
-            }}
-          >
-            Africa
-          </div>
-          <div
-            className="region"
-            onClick={() => {
-              setRegion("Americas");
-              setToggle(!toggle);
-            }}
-          >
-            America
-          </div>
-          <div
-            className="region"
-            onClick={() => {
-              setRegion("Asia");
-              setToggle(!toggle);
-            }}
-          >
-            Asia
-          </div>
-          <div
-            className="region"
-            onClick={() => {
-              setRegion("Europe");
-              setToggle(!toggle);
-            }}
-          >
-            Europe
-          </div>
-          <div
-            className="region"
-            onClick={() => {
-              setRegion("Oceania");
-              setToggle(!toggle);
-            }}
-          >
-            Oceania
-          </div>
+          {options.map((option, i) => (
+            <div
+              className="region"
+              key={i}
+              onClick={() => selectRegion(option)}
+            >
+              {option}
+            </div>
+          ))}
         </div>
       )}
     </div>
