@@ -32,7 +32,7 @@ export default function Homeview() {
    */
 
   return (
-    <>
+    <div className="container">
       <Header />
       <div className="search light">
         <SearchInput
@@ -42,6 +42,6 @@ export default function Homeview() {
         <FilterButton handleRegionChange={handleRegionChange} />
       </div>
       <CountryList countriesRes={countriesArr} />
-    </>
+    </div>
   );
 }
