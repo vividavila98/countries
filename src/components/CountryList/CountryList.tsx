@@ -12,7 +12,7 @@ export default function CountryList(props: CountryResults) {
   return (
     <section className="country-list light">
       {countriesRes
-        ? countriesRes.map((elem: any, index) => (
+        ? countriesRes.map((elem: any, index: number) => (
             <Country key={index} info={elem} />
           ))
         : ""}
