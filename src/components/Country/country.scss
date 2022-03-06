@@ -1,0 +1,30 @@
+div.country {
+  display: inline-block;
+  margin: 10px;
+  width: 23%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 450px;
+
+  div.img-header {
+    height: 50%;
+  }
+  div.info {
+    padding: 30px;
+    padding-top: 10px;
+    .name {
+      font-weight: bold;
+    }
+    p.country {
+      font-size: 1.2em;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  div.country {
+    width: 30%;
+  }
+}

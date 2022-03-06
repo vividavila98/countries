@@ -1,0 +1,25 @@
+button.list {
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 55px;
+  width: 150px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.region-container {
+  background-color: #fff;
+  position: absolute;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 5px;
+  .region {
+    padding: 10px 5px;
+    &:hover {
+      cursor: pointer;
+      background-color: #f2f2f2;
+    }
+  }
+}
