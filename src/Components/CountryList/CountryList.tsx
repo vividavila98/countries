@@ -1,6 +1,6 @@
 import React from "react";
 import "./country-list.scss";
-import Country from "../Country/Country";
+import { Country } from "../../components";
 
 interface CountryResults {
   countriesRes: any;
